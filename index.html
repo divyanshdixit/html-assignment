@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
+
     <style>
         body {
             font-family: 'Nunito Sans', sans-serif;
@@ -74,11 +77,25 @@
             padding-top: 17px;
         }
 
+        .slider-sec {
+            padding-bottom: 200px;
+        }
+
         .slider-wrapper {
             background: #F8FAFC 0% 0% no-repeat padding-box;
             box-shadow: 0px 16px 48px #00000029;
             border-radius: 42px;
-            padding: 40px;
+            padding: 40px 40px 0px 40px;
+        }
+
+        .slider-box-wrapper {
+            padding: 0px 30px 0px 70px;
+            position: relative;
+            top: 70px;
+        }
+
+        .multiple-items{
+            background-color: #F8FAFC;
         }
 
         .slider-subtext {
@@ -97,14 +114,61 @@
             padding: 30px;
         }
 
-        .outer-div{
-            display: flex;
-    justify-content: space-between;
+        .left-arrow {
+            left: -120px;
         }
 
-        .username-img{
-            display: flex;
+        .right-arrow {
+            right: -90px;
         }
+
+        .slick-arrow {
+            position: absolute;
+            top: 40%;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 7px 17px #00000029;
+            color: grey;
+            width: 62px;
+            height: 63px;
+            border: none;
+            border-radius: 50%;
+        }
+
+        .username-img {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .username-img img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .name-pos {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name-star {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .name-star img {
+            width: 14px;
+            height: 14px;
+        }
+
+        .name-star p {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .designation{
+            font-size: 14px;
+        }
+
         .partner-img-text {
             display: flex;
             flex-direction: column;
@@ -120,6 +184,7 @@
             color: #fff;
         }
     </style>
+
 </head>
 
 <body>
@@ -345,120 +410,134 @@
                             <img src="star.png" class="img-fluid" alt="" width="60" />
                             <h3> Lorem ipsum dolor sit . </h3>
                         </div>
+                        <!-- Using slick slider -->
                         <div class="slider-box-wrapper">
-                            <div class="row">
-                                <div class="col-md-4">
+                            <div class="row multiple-items" style="background-color: #F7FAFC!important;">
+
+                                <div class="col-md-3" style="flex: 22%!important; width: auto !important; background-color: #F7FAFC!important;">
                                     <div class="slider-boxmodel">
                                         <div class="outer-div">
                                             <div class="username-img">
-                                                <img src="user-1.png" class="img-fluid" alt="" width="" />
-                                                <div>
-                                                    <p> John Doe </p>
-                                                    <p> CEO </p>
-                                                </div>
-                                            </div>
-                                            <div class="star-rating">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="ratings">
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <!-- <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star"></i> -->
+                                                <img src="user-1.png" class="img-fluid" alt="" width="">
+                                                <div class="name-pos">
+                                                    <div class="name-star">
+                                                        <p> John Doe </p>
+                                                        <div class="d-flex justify-content-between align-items-start">
+
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                        </div>
                                                     </div>
+                                                    <p class="designation"> Customer Service Manager </p>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <p class="box-para">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo est.
-                                            Pellentesque eu placerat mauris. Etiam ut maximus ante. Suspendisse varius
-                                            dolor nec bibendum dignissim. Proin in diam a justo sollicitudin mattis eu
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+                                            commodo est.
+                                            Pellentesque eu placerat mauris. Etiam ut maximus ante. Suspendisse
+                                            varius
+                                            dolor nec bibendum dignissim. Proin in diam a justo sollicitudin
+                                            mattis eu
                                             sagittis nunc. In hac habitasse platea dictumst.
                                         </p>
                                     </div>
                                 </div>
-
-                                <div class="col-md-4">
+                                <div class="col-md-3" style="flex: 22%!important; width: auto !important;">
                                     <div class="slider-boxmodel">
                                         <div class="outer-div">
                                             <div class="username-img">
-                                                <img src="user-1.png" class="img-fluid" alt="" width="" />
-                                                <div>
-                                                    <p> John Doe </p>
-                                                    <p> CEO </p>
-                                                </div>
-                                            </div>
-                                            <div class="star-rating">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="ratings">
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <!-- <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star"></i> -->
+                                                <img src="user-2.png" class="img-fluid" alt="" width="">
+                                                <div class="name-pos">
+                                                    <div class="name-star">
+                                                        <p> Amanda green </p>
+                                                        <div class="d-flex justify-content-between align-items-start">
+
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                        </div>
                                                     </div>
+                                                    <p class="designation"> Service Manager </p>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <p class="box-para">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo est.
-                                            Pellentesque eu placerat mauris. Etiam ut maximus ante. Suspendisse varius
-                                            dolor nec bibendum dignissim. Proin in diam a justo sollicitudin mattis eu
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+                                            commodo est.
+                                            Pellentesque eu placerat mauris. Etiam ut maximus ante. Suspendisse
+                                            varius
+                                            dolor nec bibendum dignissim. Proin in diam a justo sollicitudin
+                                            mattis eu
                                             sagittis nunc. In hac habitasse platea dictumst.
                                         </p>
                                     </div>
                                 </div>
-
-                                <div class="col-md-4">
+                                <div class="col-md-3" style="flex: 22%!important; width: auto !important;">
                                     <div class="slider-boxmodel">
                                         <div class="outer-div">
                                             <div class="username-img">
-                                                <img src="user-1.png" class="img-fluid" alt="" width="" />
-                                                <div>
-                                                    <p> John Doe </p>
-                                                    <p> CEO </p>
-                                                </div>
-                                            </div>
-                                            <div class="star-rating">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="ratings">
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <img src="star-rating.png" class="img-fluid" alt="" width="14"
-                                                            height="14" />
-                                                        <!-- <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star rating-color"></i>
-                                                        <i class="fa fa-star"></i> -->
+                                                <img src="user-3.png" class="img-fluid" alt="" width="">
+                                                <div class="name-pos">
+                                                    <div class="name-star">
+                                                        <p> Amanda green </p>
+                                                        <div class="d-flex justify-content-between align-items-start">
+
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                        </div>
                                                     </div>
+                                                    <p class="designation"> Operations Manager </p>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <p class="box-para">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo est.
-                                            Pellentesque eu placerat mauris. Etiam ut maximus ante. Suspendisse varius
-                                            dolor nec bibendum dignissim. Proin in diam a justo sollicitudin mattis eu
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+                                            commodo est.
+                                            Pellentesque eu placerat mauris. Etiam ut maximus ante. Suspendisse
+                                            varius
+                                            dolor nec bibendum dignissim. Proin in diam a justo sollicitudin
+                                            mattis eu
+                                            sagittis nunc. In hac habitasse platea dictumst.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" style="flex: 22%!important; width: auto !important;">
+                                    <div class="slider-boxmodel">
+                                        <div class="outer-div">
+                                            <div class="username-img">
+                                                <img src="user-2.png" class="img-fluid" alt="" width="">
+                                                <div class="name-pos">
+                                                    <div class="name-star">
+                                                        <p> Sam Cooper </p>
+                                                        <div class="d-flex justify-content-between align-items-start">
+
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                            <img src="star-rating.png" class="img-fluid" alt="" />
+                                                        </div>
+                                                    </div>
+                                                    <p class="designation"> Operations Manager  </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <p class="box-para">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+                                            commodo est.
+                                            Pellentesque eu placerat mauris. Etiam ut maximus ante. Suspendisse
+                                            varius
+                                            dolor nec bibendum dignissim. Proin in diam a justo sollicitudin
+                                            mattis eu
                                             sagittis nunc. In hac habitasse platea dictumst.
                                         </p>
                                     </div>
@@ -466,9 +545,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
+        </div>
+        </div>
     </section>
 
     <!-- partnership section -->
@@ -519,6 +599,26 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/225aa6ef5c.js" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.multiple-items').slick({
+                accessibility: true,
+                arrows: true,
+                autoplay: false,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                prevArrow: '<button type="button" class="btn btn-primary btn-sm left-arrow"> <i class="fa-solid fa-angle-left"></i> </button>',
+                nextArrow: '<button type="button" class="btn btn-primary btn-sm right-arrow"> <i class="fa-solid fa-angle-right"></i> </button>'
+            });
+        });
+    </script>
 </body>
 
 </html>
