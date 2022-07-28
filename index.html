@@ -23,6 +23,20 @@
             ;
         }
 
+        .container-nav {
+            border-bottom: 1px solid #707070;
+            width: 100%;
+        }
+
+        .nav-link {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+            color: #000000;
+            text-transform: capitalize;
+        }
+
         .pricing-section {
             margin: 100px 0px;
             background-image: url('mask-grp.png');
@@ -33,15 +47,38 @@
 
         .main-heading {
             font-size: 40px;
+            line-height: 54px;
+            font-weight: 900;
+            color: #000000;
+        }
+
+        .para {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: normal;
+            margin-bottom: 50px;
         }
 
         .pricing {
             background: #1492E6 0% 0% no-repeat padding-box;
             box-shadow: 0px 16px 48px #00000029;
             border-radius: 33px;
-            padding: 17px 50px;
+            padding: 15px 50px;
             font-size: 23px;
-            color: #FFFFFF
+            line-height: 31px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .heading {
+            font-size: 35px;
+            line-height: 47px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .card-image-sec {
+            margin-bottom: 100px;
         }
 
         .card-section {
@@ -56,7 +93,17 @@
             padding: 40px 20px;
         }
 
-        .card-heading {}
+        .card-heading {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card-para {
+            font-size: 18px;
+            line-height: 24px;
+        }
 
         .simple-card {
             text-align: left;
@@ -65,20 +112,41 @@
         .simple-card img {
             width: 240px;
             height: 187px;
+            border: none;
+            margin-bottom: 40px;
         }
 
         .img-heading {
             display: flex;
             align-items: center;
+            margin-bottom: 15px;
         }
 
-        .img-heading .heading {
+        .img-heading+p {
+            font-size: 21px;
+            line-height: 28px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .inner-heading {
             margin-left: 30px;
             padding-top: 17px;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: bold;
+        }
+
+        .left-right-sec {
+            margin-bottom: 100px;
+        }
+
+        .left-right-sec>div:first-child {
+            margin-bottom: 100px;
         }
 
         .slider-sec {
-            padding-bottom: 200px;
+            padding-bottom: 180px;
         }
 
         .slider-wrapper {
@@ -94,7 +162,7 @@
             top: 70px;
         }
 
-        .multiple-items{
+        .multiple-items {
             background-color: #F8FAFC;
         }
 
@@ -147,6 +215,7 @@
         .name-pos {
             display: flex;
             flex-direction: column;
+            flex-basis: 75%;
         }
 
         .name-star {
@@ -161,18 +230,37 @@
         }
 
         .name-star p {
-            font-size: 15px;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 18px;
+        }
+
+        .designation {
+            font-size: 12px;
+            line-height: 16px;
             font-weight: 600;
         }
 
-        .designation{
-            font-size: 14px;
+        .box-para {
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: normal;
+        }
+
+        .partner-sec {
+            margin-bottom: 100px;
         }
 
         .partner-img-text {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        .partner-img-text h5 {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: bold;
         }
 
         .partner-img {
@@ -191,10 +279,61 @@
 
     <!-- Nav section -->
 
-    <div class="container" style="max-width:100%; padding:0px;">
+    <div class="container-nav" style="max-width:100%; padding:0px;">
+        <div class="row justify-content-center">
+            <!-- Just an image -->
+            <nav class="navbar">
+                <a class="navbar-brand" href="#">
+                    <img src="8b8e3bae-8dbe-4c4a-b3fa-b1f1431d1f0c.png" width="164" height="48" alt="">
+                </a>
+        </div>
+        <ul class="nav justify-content-center ">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">nav1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">nav2</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    nav3
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    nav4
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">nav5</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">nav6</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">nav7</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">nav8</a>
+            </li>
+            </nav>
+    </div>
+
+    <!-- <div class="container" style="max-width:100%; padding:0px;">
         <div class="row">
             <div class="col-md-12">
-                <!-- Just an image -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding:0px 20px">
                     <a class="navbar-brand" href="#">
                         <img src="https://www.miraeassetmf.co.in/images/default-source/default-album/mirae-asset-mutual-fund-logo.png"
@@ -229,24 +368,18 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
     <!-- pricing section -->
     <section class="pricing-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="main-heading"> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, </h1>
-                    <p class="para"> is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-                        only five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged.
-                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                        passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem
-                        Ipsum.</p>
+                    <h1 class="main-heading"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+                    <p class="para"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo
+                        est.Pellentesque eu placerat mauris. Etiam ut maximus ante. Suspendisse varius dolor nec
+                        bibendum dignissim. Proin in diam a justo sollicitudin mattis eu sagittis nunc. In hac habitasse
+                        platea dictumst.</p>
                     <button type="button" class="btn btn-primary pricing"> Check Pricing </button>
                 </div>
             </div>
@@ -267,7 +400,8 @@
                 <div class="col-md-4">
                     <div class="card-box">
                         <h3 class="card-heading text-center"> Lorem ipsum dolor sit .</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo est.Pellentesque eu
+                        <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo
+                            est.Pellentesque eu
                             placerat mauris. Etiam ut maximus ante. Suspendisse varius dolor nec bibendum dignissim.
                             Proin
                             in diam a justo sollicitudin mattis eu sagittisnunc. In hac habitasse.</p>
@@ -276,7 +410,8 @@
                 <div class="col-md-4">
                     <div class="card-box">
                         <h3 class="card-heading text-center"> Lorem ipsum dolor sit .</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo est.Pellentesque eu
+                        <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo
+                            est.Pellentesque eu
                             placerat mauris. Etiam ut maximus ante. Suspendisse varius dolor nec bibendum dignissim.
                             Proin
                             in diam a justo sollicitudin mattis eu sagittisnunc. In hac habitasse.</p>
@@ -285,7 +420,8 @@
                 <div class="col-md-4">
                     <div class="card-box">
                         <h3 class="card-heading text-center"> Lorem ipsum dolor sit .</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo est.Pellentesque eu
+                        <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo
+                            est.Pellentesque eu
                             placerat mauris. Etiam ut maximus ante. Suspendisse varius dolor nec bibendum dignissim.
                             Proin
                             in diam a justo sollicitudin mattis eu sagittisnunc. In hac habitasse.</p>
@@ -308,7 +444,8 @@
                     <div class="simple-card">
                         <img src="lady.png" class="img-thumbnail" alt="...">
                         <h3 class="card-heading"> Lorem ipsum dolor sit .</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo est.Pellentesque eu
+                        <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo
+                            est.Pellentesque eu
                             placerat mauris. Etiam ut maximus ante. Suspendisse varius dolor nec bibendum dignissim.
                             Proin
                             in diam a justo sollicitudin mattis eu sagittisnunc. In hac habitasse.</p>
@@ -318,7 +455,8 @@
                     <div class="simple-card">
                         <img src="boy.png" class="img-thumbnail" alt="...">
                         <h3 class="card-heading"> Lorem ipsum dolor sit .</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo est.Pellentesque eu
+                        <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo
+                            est.Pellentesque eu
                             placerat mauris. Etiam ut maximus ante. Suspendisse varius dolor nec bibendum dignissim.
                             Proin
                             in diam a justo sollicitudin mattis eu sagittisnunc. In hac habitasse.</p>
@@ -328,7 +466,8 @@
                     <div class="simple-card">
                         <img src="girl.png" class="img-thumbnail" alt="...">
                         <h3 class="card-heading"> Lorem ipsum dolor sit .</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo est.Pellentesque eu
+                        <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed commodo
+                            est.Pellentesque eu
                             placerat mauris. Etiam ut maximus ante. Suspendisse varius dolor nec bibendum dignissim.
                             Proin
                             in diam a justo sollicitudin mattis eu sagittisnunc. In hac habitasse.</p>
@@ -350,7 +489,7 @@
                 <div class="col-md-7">
                     <div class="img-heading">
                         <img src="money.png" class="img-hand" alt="..." width="60" height="60">
-                        <h1 class="heading text-left"> Lorem ipsum dolor sit .</h1>
+                        <h1 class="inner-heading text-left"> Lorem ipsum dolor sit .</h1>
                     </div>
                     <p>adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris. ut maximus ante.
                         Suspendisse varius dolor nec bibendum dignissim</p>
@@ -361,7 +500,7 @@
                 <div class="col-md-5">
                     <div class="img-heading">
                         <img src="goal.png" class="img-arrow" alt="..." width="60" height="60">
-                        <h1 class="heading text-left"> Lorem ipsum dolor sit .</h1>
+                        <h1 class="inner-heading text-left"> Lorem ipsum dolor sit .</h1>
                     </div>
                     <p>adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris. ut maximus ante. Suspendisse
                     </p>
@@ -374,7 +513,7 @@
                 <div class="col-md-7">
                     <div class="img-heading">
                         <img src="check.png" class="img-arrow" alt="..." width="60" height="60">
-                        <h1 class="heading text-left"> Lorem ipsum dolor sit .</h1>
+                        <h1 class="inner-heading text-left"> Lorem ipsum dolor sit .</h1>
                     </div>
                     <p>adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris. ut maximus ante. Suspendisse
                     </p>
@@ -385,7 +524,7 @@
                 <div class="col-md-5">
                     <div class="img-heading">
                         <img src="money-back.png" class="img-fluid img-arrow" alt="..." width="60" height="60">
-                        <h1 class="heading text-left"> Lorem ipsum dolor sit .</h1>
+                        <h1 class="inner-heading text-left"> Lorem ipsum dolor sit .</h1>
                     </div>
                     <p>adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris. ut maximus ante. Suspendisse
                     </p>
@@ -400,7 +539,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center"> Lorem ipsum dolor sit . </h2>
+                    <h2 class="heading text-center"> Lorem ipsum dolor sit . </h2>
                 </div>
             </div>
             <div class="row">
@@ -414,7 +553,8 @@
                         <div class="slider-box-wrapper">
                             <div class="row multiple-items" style="background-color: #F7FAFC!important;">
 
-                                <div class="col-md-3" style="flex: 22%!important; width: auto !important; background-color: #F7FAFC!important;">
+                                <div class="col-md-3"
+                                    style="flex: 22%!important; width: auto !important; background-color: #F7FAFC!important;">
                                     <div class="slider-boxmodel">
                                         <div class="outer-div">
                                             <div class="username-img">
@@ -526,7 +666,7 @@
                                                             <img src="star-rating.png" class="img-fluid" alt="" />
                                                         </div>
                                                     </div>
-                                                    <p class="designation"> Operations Manager  </p>
+                                                    <p class="designation"> Operations Manager </p>
                                                 </div>
 
                                             </div>
@@ -552,11 +692,11 @@
     </section>
 
     <!-- partnership section -->
-    <section class="parter-sec">
+    <section class="partner-sec">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</h2>
+                <div class="col-md-12">
+                    <h2 class="heading text-center">Lorem ipsum dolor sit amet,consectetur adipiscing elit.</h2>
                 </div>
             </div>
             <div class="row">
